@@ -32,13 +32,14 @@ struct ContentView: View {
                         .navigationBarItems(trailing: Button(action: {
                             self.session.logOut()
                         }) {
+//                            Image(systemName: "logout")
                             Text("Logout")
                         })
                     }
                 } else {
                     LoginView()
                         .navigationBarItems(trailing: Text(""))
-                        
+
                 }
             }
             .onAppear(perform: getUser)
